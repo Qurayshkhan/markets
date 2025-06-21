@@ -1,6 +1,4 @@
 <?php
-use Service;
-
 
 require_once("./loader.php");
 
