@@ -25,7 +25,7 @@ class Core
 {
 
 
-  private  $db;
+  private $db;
 
   public $site_name;
   public $c_nit;
@@ -235,8 +235,8 @@ class Core
     $this->declared_tax = $settings->declared_tax;
     $this->min_cost_declared_tax = $settings->min_cost_declared_tax;
 
-    $this->notify_admin  = $settings->notify_admin;
-    $this->user_limit  = $settings->user_limit;
+    $this->notify_admin = $settings->notify_admin;
+    $this->user_limit = $settings->user_limit;
     $this->reg_allowed = $settings->reg_allowed;
 
     $this->auto_verify = $settings->auto_verify;
@@ -493,7 +493,7 @@ class Core
     $cod = $max_id;
     $sig = $cod + 1;
 
-    $Strsig = (string)$sig;
+    $Strsig = (string) $sig;
     $formato = str_pad($Strsig, "" . $digitss . "", "0", STR_PAD_LEFT);
 
 
@@ -524,7 +524,7 @@ class Core
     $cod = $max_id;
     $sig = $cod + 1;
 
-    $Strsig = (string)$sig;
+    $Strsig = (string) $sig;
     $formato = str_pad($Strsig, "" . $digits . "", "0", STR_PAD_LEFT);
 
 
@@ -555,7 +555,7 @@ class Core
     $cod = $max_id;
     $sig = $cod + 1;
 
-    $Strsig = (string)$sig;
+    $Strsig = (string) $sig;
     $formato = str_pad($Strsig, "" . $digits . "", "0", STR_PAD_LEFT);
 
 
@@ -571,7 +571,7 @@ class Core
    */
   public function cdp_virtual_locker()
   {
-  //verify locker
+    //verify locker
     $sql = "SELECT * FROM cdb_settings";
 
     $this->db->cdp_query($sql);
@@ -588,7 +588,7 @@ class Core
     $cod = $max_id;
     $sig = $cod + 1;
 
-    $Strsig = (string)$sig;
+    $Strsig = (string) $sig;
     $formato = str_pad($Strsig, "" . $digits . "", "0", STR_PAD_LEFT);
 
 

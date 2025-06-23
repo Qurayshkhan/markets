@@ -24,7 +24,7 @@
 class User
 {
 
-  public $logged_in = null;
+    public $logged_in = null;
     public $uid = 0;
     public $userid = 0;
     public $username;
@@ -185,9 +185,14 @@ class User
         // Delete the session cookie
         if (ini_get("session.use_cookies")) {
             $params = session_get_cookie_params();
-            setcookie(session_name(), '', time() - 42000,
-                $params["path"], $params["domain"],
-                $params["secure"], $params["httponly"]
+            setcookie(
+                session_name(),
+                '',
+                time() - 42000,
+                $params["path"],
+                $params["domain"],
+                $params["secure"],
+                $params["httponly"]
             );
         }
 
@@ -295,7 +300,7 @@ class User
 
 
 
-        /**
+    /**
      * User::cdp_ccnumberExists()
      */
     public function cdp_ccnumberExists($document_number, $id = null)
@@ -402,5 +407,25 @@ class User
         $row = $this->db->cdp_registros();
 
         return $row;
+    }
+
+    public function import_users($data)
+    {
+        $sql = "INSERT INTO cdb_users (fname, lname, locker, email, phone, country, password, userlevel) VALUES (:fname, :lname, :locker, :email, :phone, :country, :password, :userlevel)";
+        $this->db->cdp_query($sql);
+
+        $this->db->bind(':fname', $data['fname']);
+        $this->db->bind(':lname', $data['lname']);
+        $this->db->bind(':locker', $data['locker']);
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':phone', $data['phone']);
+        $this->db->bind(':country', $data['country']);
+        $this->db->bind(':password', $data['password']);
+        $this->db->bind(':userlevel', $data['userlevel']);
+
+        $this->db->cdp_execute();
+
+        return true;
+
     }
 }
