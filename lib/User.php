@@ -116,6 +116,16 @@ class User
         if ($username == "" && $pass == "") {
             $this->errors[] = "Enter a valid username and password.";
         } else {
+            $user = $this->db->cdp_query("SELECT id, email, is_old FROM cdb_users WHERE email = :email AND is_old = 1");
+            $this->db->bind(':email', $username);
+            $user = $this->db->cdp_fetch_assoc();
+            if ($user) {
+                header("Location: change-old-user-password.php");
+                exit;
+            }
+
+
+
             $status = $this->cdp_checkStatus($username, $pass);
             if ($status == 0) {
                 $this->errors[] = 'The login and / or password do not match the database.';
@@ -428,4 +438,51 @@ class User
         return true;
 
     }
+
+    public function cdp_change_password($email, $password, $confirmation_password)
+    {
+        $this->errors = [];
+
+        if (empty($password) || empty($confirmation_password)) {
+            $this->errors[] = 'Both password fields are required.';
+            return false;
+        }
+
+        if ($password !== $confirmation_password) {
+            $this->errors[] = 'Passwords do not match.';
+            return false;
+        }
+
+        if (strlen($password) < 6) {
+            $this->errors[] = 'Password must be at least 6 characters long.';
+            return false;
+        }
+
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Check if user exists and is_old = 1
+        $this->db->cdp_query("SELECT id, email, is_old FROM cdb_users WHERE email = :email AND is_old = 1");
+        $this->db->bind(':email', $email);
+        $user = $this->db->cdp_fetch_assoc();
+
+        if (!$user) {
+            $this->errors[] = 'User not found or already updated password.';
+            return false;
+        }
+
+        $user_id = $user['id'];
+
+        $this->db->cdp_query("UPDATE cdb_users SET password = :password, is_old = 0 WHERE id = :id");
+        $this->db->bind(':password', $hashed_password);
+        $this->db->bind(':id', $user_id);
+
+        if ($this->db->cdp_execute()) {
+            return true;
+        } else {
+            $this->errors[] = 'Failed to update password.';
+            return false;
+        }
+    }
+
+
 }
