@@ -1,0 +1,382 @@
+/* Crancy Table Styles */
+.crancy-table {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.04);
+}
+
+.crancy-table.crancy-table--v3 {
+  padding: 30px 10px;
+}
+
+.crancy-table__main {
+  margin: 0;
+  width: 100%;
+}
+
+.crancy-table__main.crancy-table__main-v3 {
+  width: 100%;
+}
+
+.crancy-table__head {
+  background: transparent;
+}
+
+.crancy-table__main-v3 .crancy-table__head th {
+  border-top: 1px solid #e4f2ff;
+  border-bottom: 1px solid #e4f2ff;
+  color: #5d6a83 !important;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.crancy-table__body td {
+  border-bottom: 1px solid #e4f2ff;
+  padding: 20px !important;
+  vertical-align: middle;
+}
+
+.crancy-table__main.crancy-table__main-v3 tr th,
+.crancy-table__main.crancy-table__main-v3 tr td {
+  width: auto !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.crancy-table__main.crancy-table__main-v3 .crancy-table__column-1 {
+  width: 25% !important;
+  text-align: left !important;
+}
+
+.crancy-table__main.crancy-table__main-v3 .crancy-table__column-2 {
+  width: 25% !important;
+  text-align: left !important;
+}
+
+.crancy-table__main.crancy-table__main-v3 .crancy-table__column-3 {
+  width: 20% !important;
+  text-align: left !important;
+}
+
+.crancy-table__main.crancy-table__main-v3 .crancy-table__column-4 {
+  width: 15% !important;
+  text-align: center !important;
+}
+
+.crancy-table__main.crancy-table__main-v3 .crancy-table__column-5 {
+  width: 15% !important;
+  text-align: center !important;
+}
+
+.crancy-table__main.crancy-table__main-v3 .crancy-table__column-7 {
+  width: 18% !important;
+}
+
+/* Jobs table specific styles */
+.crancy-table__main.crancy-table__jobs .crancy-table__column-1 {
+  width: 8% !important;
+}
+
+/* Sub-services table alignment fix */
+.crancy-table__main-v3 .crancy-table__h2 {
+  text-align: center !important;
+}
+
+.crancy-wc__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.crancy-wc__form-check {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.crancy-table__customer-img {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.crancy-table__customer-img img {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+}
+
+.crancy-table__customer-img .crancy-table__product-title {
+  font-weight: 700;
+  margin: 0;
+  font-size: 18px;
+  color: #191b23;
+}
+
+.crancy-table__product-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #191b23;
+}
+
+.crancy-table__status {
+  font-size: 14px;
+  color: #194bfb;
+  text-align: center;
+  padding: 6px 24px;
+  border-radius: 4px;
+  background: #e1f4e9;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 5px;
+  font-weight: 500;
+}
+
+.crancy-table__status.crancy-table__status--paid {
+  background: #e8edff;
+  color: #194bfb;
+}
+
+.crancy-table__status.crancy-table__status--unpaid {
+  background: #faefee;
+  color: #ff4747;
+}
+
+.crancy-table__status.crancy-table__status--delete {
+  background: #fdf9e9;
+  color: #facc15;
+}
+
+.crancy-table__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.crancy-customer-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.crancy-customer-filter__single {
+  display: flex;
+}
+
+.crancy-customer-filter__single.crancy-customer-filter__single--csearch {
+  flex: 1;
+  max-width: 600px;
+}
+
+.crancy-customer-filter__single--button {
+  background: #fafafa !important;
+  color: #5d6a83;
+  font-weight: 500;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.crancy-customer-filter__single--button:hover {
+  background: #e8edff !important;
+  color: #194bfb;
+}
+
+.crancy-header__form.crancy-header__form--customer {
+  width: 100%;
+}
+
+.crancy-header__form.crancy-header__form--customer .crancy-header__form-inner {
+  min-height: 56px;
+  border-radius: 12px;
+  background: #fafafa;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border: 1px solid transparent;
+}
+
+.crancy-header__form.crancy-header__form--customer
+  .crancy-header__form-inner:hover {
+  background-color: #fff;
+  border-color: #194bfb;
+}
+
+.crancy-header__form .search-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.crancy-header__form input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 16px;
+  color: #191b23;
+}
+
+.crancy-header__form input::placeholder {
+  color: #5d6a83;
+}
+
+.crancy-table-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding: 0 30px;
+}
+
+.dataTables_length label {
+  color: #5d6a83;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 !important;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dataTables_length select {
+  width: 68px !important;
+  height: 42px;
+  border: 1px solid #eeeff2 !important;
+  border-radius: 6px !important;
+  background-color: transparent !important;
+  padding: 0 12px;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3e%3cpath d='M4 6L8 10L12 6' stroke='%23A0AEC0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e") !important;
+  background-repeat: no-repeat !important;
+  background-size: 20px !important;
+  background-position: calc(100% - 8px) center !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.dataTables_paginate,
+.crancy-pagination {
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.dataTables_paginate .pagination {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dataTables_paginate .pagination a,
+.crancy-pagination li a {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: transparent !important;
+  border: none !important;
+  color: #5d6a83 !important;
+  line-height: 40px;
+  font-weight: 500;
+  font-size: 16px !important;
+  text-decoration: none;
+}
+
+.dataTables_paginate .pagination a:hover,
+.dataTables_paginate .paginate_button.active a {
+  background: #eff7ff !important;
+  color: #194bfb !important;
+}
+
+.dataTables_paginate .paginate_button.disabled a {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media only screen and (max-width: 991px) {
+  .crancy-customer-filter {
+    padding: 0 !important;
+  }
+
+  .crancy-table {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .crancy-customer-filter__single,
+  .crancy-customer-filter__single--button {
+    width: 100%;
+  }
+
+  .crancy-table-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .crancy-table__main,
+  #crancy-table__main {
+    width: 690px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  /* Ensure dialog content doesn't overflow on very small screens */
+  .MuiDialog-paper {
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+    margin: 10px !important;
+    left: 10px !important;
+    right: 10px !important;
+  }
+  
+  /* Ensure dialog container doesn't exceed screen bounds */
+  .MuiDialog-container {
+    padding: 10px !important;
+  }
+  
+  /* Fix dialog positioning */
+  .MuiDialog-root .MuiDialog-paper {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: calc(100vw - 20px) !important;
+    max-width: calc(100vw - 20px) !important;
+    max-height: calc(100vh - 40px) !important;
+    margin: 0 !important;
+  }
+}

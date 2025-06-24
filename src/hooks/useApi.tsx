@@ -1,0 +1,141 @@
+import { useRouter } from "next/router"
+
+import { useSnackbar } from "notistack"
+import { useLayoutEffect, useEffect, useRef } from "react"
+
+import { dateUtility } from "@utils/date"
+import { baseURL } from "@utils/constants"
+import { Response, T } from "@utils/types"
+import { getBrowserItem } from "@utils/browser-utility"
+import { useAppContext, AuthTypes } from "@contexts/index"
+
+const useBrowserLayoutEffect =
+  typeof window !== "undefined" ? useLayoutEffect : useEffect
+
+export const useApi = () => {
+  const router = useRouter()
+  const { dispatch } = useAppContext()
+  const { enqueueSnackbar } = useSnackbar()
+
+  let controller: any = null
+
+  const isMounted = useRef(false)
+  useBrowserLayoutEffect((): (() => void) => {
+    controller = new AbortController()
+
+    isMounted.current = true
+    return (): void => {
+      isMounted.current = false
+      controller.abort()
+    }
+  }, [])
+
+  const api = async ({
+    uri,
+    body,
+    headers,
+    message,
+    method = "GET",
+  }: {
+    body?: any
+    uri: string
+    headers?: any
+    method?: string
+    message?: string
+  }): Promise<T> => {
+    try {
+      const myHeaders = new Headers()
+      myHeaders.append("Content-Type", "application/json")
+
+      const token = getBrowserItem()
+      if (token) {
+        myHeaders.append("Authorization", `Bearer ${token}`)
+      }
+
+      const response = await fetch(baseURL + uri, {
+        body,
+        method,
+        mode: "cors",
+        signal: controller?.signal,
+        headers: headers || myHeaders,
+      })
+
+      if (!response.ok) throw response
+
+      const data: Response = await response.json()
+
+      if (process && process.env.NODE_ENV === "development") {
+        console.log(`[Response at ${dateUtility.getLocaleDate()}]:`, data)
+      }
+
+      if (message) {
+        enqueueSnackbar(message, {
+          variant: "success",
+          autoHideDuration: 3000,
+        })
+      }
+
+      if (isMounted.current) {
+        // can be used to set local state if needed
+        return data
+      }
+    } catch (err: any) {
+      // need to assign to a variable to prevent error when we do error.json() below
+      let error = err
+      let status = error.status
+
+      if (!isErrorWithMessage(err)) {
+        if (!status) status = 500
+        error = await error.json()
+      } else {
+        error = {
+          message: err.message,
+          status: error.status || 500,
+        }
+      }
+
+      if (process && process.env.NODE_ENV === "development") {
+        console.log(`[Error at ${dateUtility.getLocaleDate()}]:`, error)
+        body && console.log(`Error for Body`, JSON.parse(body))
+      }
+
+      if (status === 401 || error.status === 401) {
+        // 401 : Token expired / invalid
+        // Ask to relogin
+        dispatch({ type: AuthTypes.LOGOUT })
+        router.replace("/")
+      } else if (
+        (status || error?.message) &&
+        error?.message !== "Token is expired" &&
+        error?.message !== "The user aborted a request."
+      ) {
+        if (error?.message === "Failed to fetch") {
+          error.message = "Network Error"
+        }
+
+        enqueueSnackbar(error?.message, {
+          variant: "error",
+          autoHideDuration: 3000,
+        })
+
+        throw error
+      }
+    }
+  }
+
+  return [api]
+}
+
+type ErrorWithMessage = {
+  message: string
+  status?: number
+}
+
+function isErrorWithMessage(error: unknown): error is ErrorWithMessage {
+  return (
+    typeof error === "object" &&
+    error !== null &&
+    "message" in error &&
+    typeof (error as Record<string, unknown>).message === "string"
+  )
+}
