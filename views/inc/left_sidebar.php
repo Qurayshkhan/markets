@@ -1002,7 +1002,7 @@
 											<h5 class="m-b-0 user-name font-medium"><?php echo $mensaje; ?>,&nbsp;&nbsp;</h5>
 											<span class="op-5 user-email"><?php echo $userData->fname; ?></span>
 											<!-- <br><?php echo $lang['left-menu-sidebar-00'] ?> <b> -->
-											<br>Suit: <b>
+											<br>My Suit: <b>
 										<?php echo $userData->locker; ?></b>
 										</a>
 									</div>
@@ -1027,9 +1027,15 @@
 									<span class="hide-menu"> <?php echo $lang['left-menu-sidebar-2'] ?> </span>
 								</a>
 							</li>
-
-
 							<li class="sidebar-item">
+								<a class="sidebar-link waves-effect waves-dark" href="index.php" aria-expanded="false"><i
+										class="mdi mdi-codepen"></i>
+									<span class="hide-menu"> My Suit </span>
+								</a>
+							</li>
+
+
+							<!-- <li class="sidebar-item">
 								<a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
 									aria-expanded="false"><i class="mdi mdi-codepen"></i>
 									<span class="hide-menu"><?php echo $lang['left-menu-sidebar-5'] ?></span>
@@ -1067,7 +1073,7 @@
 
 
 								</ul>
-							</li>
+							</li> -->
 
 							<li class="sidebar-item">
 								<a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
@@ -1100,7 +1106,7 @@
 							</li>
 
 
-							<li class="sidebar-item">
+							<!-- <li class="sidebar-item">
 								<a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
 									aria-expanded="false"><i class="mdi mdi-cube-send"></i>
 									<span class="hide-menu"> <?php echo $lang['left-menu-sidebar-18'] ?></span>
@@ -1122,10 +1128,10 @@
 										</a>
 									</li>
 								</ul>
-							</li>
+							</li> -->
 
 
-							<li class="sidebar-item">
+							<!-- <li class="sidebar-item">
 								<a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
 									aria-expanded="false">
 									<i class="mdi mdi-widgets"></i>
@@ -1133,7 +1139,6 @@
 								</a>
 								<ul aria-expanded="false" class="collapse  first-level">
 
-									<!-- Module consolidate-->
 									<li class="sidebar-item">
 										<a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
 											aria-expanded="false">
@@ -1160,7 +1165,6 @@
 									</li>
 
 
-									<!-- Module consolidate-->
 									<li class="sidebar-item">
 										<a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
 											aria-expanded="false">
@@ -1186,14 +1190,14 @@
 										</ul>
 									</li>
 								</ul>
-							</li>
+							</li> -->
 
-							<li class="sidebar-item">
+							<!-- <li class="sidebar-item">
 								<a class="sidebar-link waves-effect waves-dark" href="recipients_list.php" aria-expanded="false"><i
 										class="fas fa-users"></i>
 									<span class="hide-menu"> <?php echo $lang['left-menu-sidebar-62'] ?> </span>
 								</a>
-							</li>
+							</li> -->
 
 
 							<li class="sidebar-item">

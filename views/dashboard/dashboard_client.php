@@ -127,108 +127,134 @@ foreach ($data as $row) {
 
                 <div class="row">
                     <!-- Earning Reports -->
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2">
-                      <div class="card">
-                        <div class="card-body pb-4">
-                            <div class="row">
-                                <div class="col-8">
-                                    <div class="card-body border-bottom">
-                                        <h4 class="card-title"><?php echo $lang['dash-general-34'] ?></h4>
+                    <div class="offset-lg-8 offset-xl-8 col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 mb-2">
+                        <div class="card">
+                            <div class="card-body pb-4">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="card-body border-bottom">
+                                            <h4 class="card-title"><?php echo $lang['dash-general-34'] ?></h4>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 text-center text-sm-left">
+                                        <div class="card-body pb-0 px-0 px-md-4">
+                                            <div class="m-r-10"><span class="text-info display-6"><i
+                                                        class="fas fas fa-box-open"></i></span></div>
+                                        </div>
                                     </div>
                                 </div>
 
-                                <div class="col-4 text-center text-sm-left">
-                                    <div class="card-body pb-0 px-0 px-md-4">
-                                      <div class="m-r-10"><span class="text-info display-6"><i class="fas fas fa-box-open"></i></span></div>
-                                    </div>
-                                </div>
+                                <div><br><br></div>
+                                <ul class="list-style-none">
+                                    <li class="mb-2">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 mb-2">
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0"><?php echo $lang['dash-general-38'] ?></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 mb-0">
+                                                <div class="user-progress align-items-center gap-3">
+                                                    <div class="align-items-center gap-1">
+                                                        <small
+                                                            class="text-muted"><?php echo $core->c_address; ?></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-0">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 mb-2">
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0"><?php echo $lang['dash-general-39'] ?></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 mb-0">
+                                                <div class="user-progress align-items-center gap-3">
+                                                    <div class="align-items-center gap-1">
+                                                        <small
+                                                            class="text-muted"><?php echo $userData->locker; ?></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="mb-0">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 mb-2">
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0"><?php echo $lang['left92'] ?></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 mb-0">
+                                                <div class="user-progress align-items-center gap-3">
+                                                    <div class="align-items-center gap-1">
+                                                        <small class="text-muted"><?php echo $core->c_city; ?></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+
+
+                                    <li class="mb-0">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 mb-2">
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0"><?php echo $lang['left94'] ?></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 mb-0">
+                                                <div class="user-progress align-items-center gap-3">
+                                                    <div class="align-items-center gap-1">
+                                                        <small class="text-muted"><?php echo $core->c_postal; ?></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-0">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-md-6 mb-2">
+                                                <div
+                                                    class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="me-2">
+                                                        <h6 class="mb-0"><?php echo $lang['left90'] ?></h6>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-md-6 mb-0">
+                                                <div class="user-progress align-items-center gap-3">
+                                                    <div class="align-items-center gap-1">
+                                                        <small class="text-muted"><?php echo $core->c_phone; ?></small>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
-                            
-                            <div><br><br></div>
-                            <ul class="list-style-none">
-                                <li class="mb-2">
-                                    <div class="row">
-                                        <div class="col-xl-6 col-md-6 mb-2">
-                                            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                <div class="me-2">
-                                                    <h6 class="mb-0"><?php echo $lang['dash-general-38'] ?></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-md-6 mb-0">
-                                            <div class="user-progress align-items-center gap-3">
-                                                <div class="align-items-center gap-1">
-                                                    <small class="text-muted"><?php echo $core->locker_address; ?></small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="mb-0">
-                                    <div class="row">
-                                        <div class="col-xl-6 col-md-6 mb-2">
-                                            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                <div class="me-2">
-                                                    <h6 class="mb-0"><?php echo $lang['dash-general-39'] ?></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-md-6 mb-0">
-                                            <div class="user-progress align-items-center gap-3">
-                                                <div class="align-items-center gap-1">
-                                                    <small class="text-muted"><?php echo $userData->locker; ?></small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="mb-0">
-                                    <div class="row">
-                                        <div class="col-xl-6 col-md-6 mb-2">
-                                            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                <div class="me-2">
-                                                    <h6 class="mb-0"><?php echo $lang['left92'] ?></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-md-6 mb-0">
-                                            <div class="user-progress align-items-center gap-3">
-                                                <div class="align-items-center gap-1">
-                                                    <small class="text-muted"><?php echo $core->c_city; ?></small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-
-
-                                <li class="mb-0">
-                                    <div class="row">
-                                        <div class="col-xl-6 col-md-6 mb-2">
-                                            <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                                                <div class="me-2">
-                                                    <h6 class="mb-0"><?php echo $lang['left94'] ?></h6>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-6 col-md-6 mb-0">
-                                            <div class="user-progress align-items-center gap-3">
-                                                <div class="align-items-center gap-1">
-                                                    <small class="text-muted"><?php echo $core->c_postal; ?></small>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
-                      </div>
                     </div>
                     <!--/ Earning Reports -->
 
-                    <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-12 mb-4">
+                    <!-- <div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-12 mb-4">
 
                         <div class="card">
                             <div class="card-body">
@@ -244,9 +270,7 @@ foreach ($data as $row) {
                                         <div><br></div>
                                         <div class="pb-0">
                                             <div class="row">
-                                                <!-- Primer grupo de 3 elementos -->
                                                 <div class="col-sm-6 col-md-6 col-lg-6">
-                                                    <!-- Primer elemento contador de envios -->
                                                     <div class="col-lg-12 col-md-12 mb-2">
                                                         <div class="d-flex align-items-center">
                                                             <div class="m-r-10">
@@ -258,114 +282,121 @@ foreach ($data as $row) {
                                                             </div>
 
                                                             <div class="card-info-statics">
-                                                              <h5 class="mb-0">
-                                                                <?php
+                                                                <h5 class="mb-0">
+                                                                    <?php
                                                                     $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE order_incomplete=1 and sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                    ?>            
-                                                              </h5>
-                                                              <small><?php echo $lang['dash-general-1'] ?></small>
+                                                                    ?>
+                                                                </h5>
+                                                                <small><?php echo $lang['dash-general-1'] ?></small>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Segundo elemento contador de recogida envio -->
                                                     <div class="col-lg-12 col-md-12 mb-2">
                                                         <div class="d-flex align-items-center">
-                                                            <div class="m-r-10"><a href="pickup_list.php"><span class="text-cyan display-7"><i class="mdi mdi-star-circlemdi mdi-clock-fast"></i></span> </a>
+                                                            <div class="m-r-10"><a href="pickup_list.php"><span
+                                                                        class="text-cyan display-7"><i
+                                                                            class="mdi mdi-star-circlemdi mdi-clock-fast"></i></span>
+                                                                </a>
                                                             </div>
 
                                                             <div class="card-info-statics">
-                                                              <h5 class="mb-0">
-                                                                <?php
+                                                                <h5 class="mb-0">
+                                                                    <?php
                                                                     $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE order_incomplete != 0 and is_pickup=1 and sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>            
-                                                              </h5>
-                                                              <small><?php echo $lang['dash-general-2'] ?></small>
+                                                                    ?>
+                                                                </h5>
+                                                                <small><?php echo $lang['dash-general-2'] ?></small>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Tercer elemento contador de consolidados de envios-->
+
                                                     <div class="col-lg-12 col-md-12 mb-2">
                                                         <div class="d-flex align-items-center">
-                                                            <div class="m-r-10"><a href="consolidate_list.php"><span class="text-danger display-7"><i class="mdi mdi-gift"></i></span></a>
+                                                            <div class="m-r-10"><a href="consolidate_list.php"><span
+                                                                        class="text-danger display-7"><i
+                                                                            class="mdi mdi-gift"></i></span></a>
                                                             </div>
 
                                                             <div class="card-info-statics">
-                                                              <h5 class="mb-0">
-                                                                <?php
+                                                                <h5 class="mb-0">
+                                                                    <?php
                                                                     $db->cdp_query("SELECT COUNT(*) as total FROM cdb_consolidate WHERE sender_id='" . $_SESSION['userid'] . "'");
-                                                                        $db->cdp_execute();
-                                                                        $count = $db->cdp_registro();
-                                                                        echo $count->total;
-                                                                ?>           
-                                                              </h5>
-                                                              <small><?php echo $lang['dash-general-3'] ?></small>
+                                                                    $db->cdp_execute();
+                                                                    $count = $db->cdp_registro();
+                                                                    echo $count->total;
+                                                                    ?>
+                                                                </h5>
+                                                                <small><?php echo $lang['dash-general-3'] ?></small>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                          
-                                                <!-- Segundo grupo de 3 elementos -->
                                                 <div class="col-sm-6 col-md-6 col-lg-6">
-                                                    <!-- Cuarto elemento contador de cuentas por cobrar -->
                                                     <div class="col-lg-12 col-md-12 mb-2">
                                                         <div class="d-flex align-items-center">
-                                                            <div class="m-r-10"><a href="courier_list.php"><span class="text-success display-7"><i class="mdi mdi-package-down"></i></span></a>
+                                                            <div class="m-r-10"><a href="courier_list.php"><span
+                                                                        class="text-success display-7"><i
+                                                                            class="mdi mdi-package-down"></i></span></a>
                                                             </div>
 
                                                             <div class="card-info-statics">
-                                                              <h5 class="mb-0">
-                                                                <?php
+                                                                <h5 class="mb-0">
+                                                                    <?php
                                                                     $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE status_courier=8 and sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>         
-                                                              </h5>
-                                                              <small><?php echo $lang['dash-general-25'] ?></small>
+                                                                    ?>
+                                                                </h5>
+                                                                <small><?php echo $lang['dash-general-25'] ?></small>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Quinto elemento contador de pre alertas -->
                                                     <div class="col-lg-12 col-md-12 mb-2">
                                                         <div class="d-flex align-items-center">
-                                                            <div class="m-r-10"><a href="prealert_list.php"><span class="text-warning display-7"><i class="mdi mdi-clock-alert"></i></span></a>
+                                                            <div class="m-r-10"><a href="prealert_list.php"><span
+                                                                        class="text-warning display-7"><i
+                                                                            class="mdi mdi-clock-alert"></i></span></a>
                                                             </div>
 
                                                             <div class="card-info-statics">
-                                                              <h5 class="mb-0">
-                                                                 <?php
+                                                                <h5 class="mb-0">
+                                                                    <?php
                                                                     $db->cdp_query("SELECT COUNT(*) as total FROM cdb_pre_alert where is_package=0 and customer_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>       
-                                                              </h5>
-                                                              <small><?php echo $lang['dash-general-5'] ?></small>
+                                                                    ?>
+                                                                </h5>
+                                                                <small><?php echo $lang['dash-general-5'] ?></small>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Sexto elemento de contador de paquetes -->
+
                                                     <div class="col-lg-12 col-md-12 mb-2">
                                                         <div class="d-flex align-items-center">
-                                                            <div class="m-r-10"><a href="customer_packages_list.php"><span class="text-success display-7"><i class="fas fa-cube"></i></span></a>
+                                                            <div class="m-r-10"><a
+                                                                    href="customer_packages_list.php"><span
+                                                                        class="text-success display-7"><i
+                                                                            class="fas fa-cube"></i></span></a>
                                                             </div>
 
                                                             <div class="card-info-statics">
-                                                              <h5 class="mb-0">
-                                                                 <?php
+                                                                <h5 class="mb-0">
+                                                                    <?php
                                                                     $db->cdp_query("SELECT COUNT(*) as total FROM cdb_customers_packages where sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?> 
-                                                              </h5>
-                                                              <small><?php echo $lang['dash-general-661'] ?></small>
+                                                                    ?>
+                                                                </h5>
+                                                                <small><?php echo $lang['dash-general-661'] ?></small>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -387,102 +418,113 @@ foreach ($data as $row) {
                                         <div class="pb-0">
                                             <ul class="p-0 m-0">
                                                 <li class="d-flex mb-2">
-                                                        <div class="avatar flex-shrink-0 me-3">
-                                                            <span class="avatar-initial rounded bg-label-secondary">     <i class="mdi mdi-clock-fast text-cyan ti-sm"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-secondary"> <i
+                                                                class="mdi mdi-clock-fast text-cyan ti-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                                         <div class="me-2">
                                                             <h6 class="mb-0"><?php echo $lang['dash-general-2'] ?></h6>
                                                         </div>
                                                         <div class="user-progress d-flex align-items-center gap-3">
-                                                          
-                                                          <div class="d-flex align-items-center gap-1">
-                                                            <small class="text-muted">
-                                                                <?php
-                                                                $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE is_pickup=1 and order_incomplete=1 and sender_id='" . $_SESSION['userid'] . "' ");
+
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <small class="text-muted">
+                                                                    <?php
+                                                                    $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE is_pickup=1 and order_incomplete=1 and sender_id='" . $_SESSION['userid'] . "' ");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>  
-                                                            </small>
-                                                          </div>
+                                                                    ?>
+                                                                </small>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
 
                                                 <li class="d-flex mb-2">
-                                                        <div class="avatar flex-shrink-0 me-3">
-                                                            <span class="avatar-initial rounded bg-label-secondary">     <i class="mdi mdi-clock-alert text-orange ti-sm"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-secondary"> <i
+                                                                class="mdi mdi-clock-alert text-orange ti-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                                         <div class="me-2">
-                                                            <h6 class="mb-0"><?php echo $lang['dash-general-221'] ?></h6>
+                                                            <h6 class="mb-0"><?php echo $lang['dash-general-221'] ?>
+                                                            </h6>
                                                         </div>
                                                         <div class="user-progress d-flex align-items-center gap-3">
-                                                          
-                                                          <div class="d-flex align-items-center gap-1">
-                                                            <small class="text-muted">
-                                                                <?php
-                                                                $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE is_pickup=1 and status_courier=12 and sender_id='" . $_SESSION['userid'] . "'");
+
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <small class="text-muted">
+                                                                    <?php
+                                                                    $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE is_pickup=1 and status_courier=12 and sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>  
-                                                            </small>
-                                                          </div>
+                                                                    ?>
+                                                                </small>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
 
 
                                                 <li class="d-flex mb-2">
-                                                        <div class="avatar flex-shrink-0 me-3">
-                                                            <span class="avatar-initial rounded bg-label-secondary">     <i class="mdi mdi-close-box text-danger ti-sm"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-secondary"> <i
+                                                                class="mdi mdi-close-box text-danger ti-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                                         <div class="me-2">
-                                                            <h6 class="mb-0"><?php echo $lang['dash-general-222'] ?></h6>
+                                                            <h6 class="mb-0"><?php echo $lang['dash-general-222'] ?>
+                                                            </h6>
                                                         </div>
                                                         <div class="user-progress d-flex align-items-center gap-3">
-                                                          
-                                                          <div class="d-flex align-items-center gap-1">
-                                                            <small class="text-muted">
-                                                                <?php
-                                                                $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE is_pickup=1 and status_courier=21 and sender_id='" . $_SESSION['userid'] . "'");
+
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <small class="text-muted">
+                                                                    <?php
+                                                                    $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE is_pickup=1 and status_courier=21 and sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>  
-                                                            </small>
-                                                          </div>
+                                                                    ?>
+                                                                </small>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
 
                                                 <li class="d-flex mb-2">
-                                                        <div class="avatar flex-shrink-0 me-3">
-                                                            <span class="avatar-initial rounded bg-label-secondary">     <i class="mdi mdi-clock-end text-success ti-sm"></i>
-                                                            </span>
-                                                        </div>
-                                                        <div class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                                                    <div class="avatar flex-shrink-0 me-3">
+                                                        <span class="avatar-initial rounded bg-label-secondary"> <i
+                                                                class="mdi mdi-clock-end text-success ti-sm"></i>
+                                                        </span>
+                                                    </div>
+                                                    <div
+                                                        class="card-user d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                                         <div class="me-2">
-                                                            <h6 class="mb-0"><?php echo $lang['dash-general-220'] ?></h6>
+                                                            <h6 class="mb-0"><?php echo $lang['dash-general-220'] ?>
+                                                            </h6>
                                                         </div>
                                                         <div class="user-progress d-flex align-items-center gap-3">
-                                                          
-                                                          <div class="d-flex align-items-center gap-1">
-                                                            <small class="text-muted">
-                                                                <?php
-                                                                $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE status_courier=8 and  is_pickup=1 and sender_id='" . $_SESSION['userid'] . "'");
+
+                                                            <div class="d-flex align-items-center gap-1">
+                                                                <small class="text-muted">
+                                                                    <?php
+                                                                    $db->cdp_query("SELECT COUNT(*) as total FROM cdb_add_order WHERE status_courier=8 and  is_pickup=1 and sender_id='" . $_SESSION['userid'] . "'");
                                                                     $db->cdp_execute();
                                                                     $count = $db->cdp_registro();
                                                                     echo $count->total;
-                                                                ?>  
-                                                            </small>
-                                                          </div>
+                                                                    ?>
+                                                                </small>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -492,7 +534,7 @@ foreach ($data as $row) {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
 
@@ -504,8 +546,11 @@ foreach ($data as $row) {
 
                                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
-                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-shipment" role="tab" aria-controls="pills-shipment" aria-selected="true"><?php echo $lang['dash-general-19'] ?></a>
-                                        <input type="hidden" name="userid" id="userid" value="<?php echo $_SESSION['userid']; ?>">
+                                        <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
+                                            href="#pills-shipment" role="tab" aria-controls="pills-shipment"
+                                            aria-selected="true"><?php echo $lang['dash-general-19'] ?></a>
+                                        <input type="hidden" name="userid" id="userid"
+                                            value="<?php echo $_SESSION['userid']; ?>">
                                     </li>
 
                                     <li class="nav-item">
@@ -515,7 +560,8 @@ foreach ($data as $row) {
                                     </li>
 
                                     <li class="nav-item">
-                                        <a class="nav-link" id="pills-profile-tab" href="customer_packages_list.php"><?php echo $lang['dash-general-23'] ?></a>
+                                        <a class="nav-link" id="pills-profile-tab"
+                                            href="customer_packages_list.php"><?php echo $lang['dash-general-23'] ?></a>
                                     </li>
 
                                     <li class="nav-item">
@@ -526,7 +572,8 @@ foreach ($data as $row) {
                                 </ul>
 
                                 <div class="tab-content" id="pills-tabContent">
-                                    <div class="tab-pane fade show active" id="pills-shipment" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <div class="tab-pane fade show active" id="pills-shipment" role="tabpanel"
+                                        aria-labelledby="pills-home-tab">
 
                                         <div class="outer_div"></div>
 

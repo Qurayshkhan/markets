@@ -113,7 +113,7 @@ $user_addreses = $db->cdp_registros();
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
-            
+
             <div class="container-fluid">
                 <div class="row">
                     <!-- Column -->
@@ -125,44 +125,57 @@ $user_addreses = $db->cdp_registros();
                                         <h3 class="card-title"><span><?php echo $lang['filter4']; ?></span></h3>
                                     </div>
                                 </div>
-                                <div><hr><br></div>
+                                <div>
+                                    <hr><br>
+                                </div>
 
                                 <center class="m-t-30">
                                     <label for="avatarInput">
-                                        <img src="assets/<?php echo ($row->avatar) ? $row->avatar : "/uploads/blank.png"; ?>" class="rounded-circle" width="150" />
+                                        <img src="assets/<?php echo ($row->avatar) ? $row->avatar : "/uploads/blank.png"; ?>"
+                                            class="rounded-circle" width="150" />
                                     </label>
                                     <div><br><br></div>
 
-                                    <form class="form-horizontal form-material" id="edit_avatar_form" name="edit_avatar_form" method="post" enctype="multipart/form-data">
+                                    <form class="form-horizontal form-material" id="edit_avatar_form"
+                                        name="edit_avatar_form" method="post" enctype="multipart/form-data">
                                         <div class="col-md-6 mb-3">
                                             <div class="form-group" style="display: none;">
                                                 <!-- Este input está oculto y se activa haciendo clic en la imagen -->
-                                                <input class="form-control" id="avatarInput" name="avatar" type="file" />
+                                                <input class="form-control" id="avatarInput" name="avatar"
+                                                    type="file" />
                                             </div>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <button type="submit" class="btn btn-outline-warning btn-confirmation"><?php echo $lang['messageerrorform13'] ?></button>
+                                            <button type="submit"
+                                                class="btn btn-outline-warning btn-confirmation"><?php echo $lang['messageerrorform13'] ?></button>
                                         </div>
                                         <input name="id" id="id" type="hidden" value="<?php echo $row->id; ?>" />
                                     </form>
 
-                                    <h4 class="card-title m-t-10"><?php echo $row->fname; ?> <?php echo $row->lname; ?></h4>
-                                    <h6 class="card-subtitle"><span><?php echo $lang['user_manage2'] ?> <i class="icon-double-angle-right"></i></span>
-                                        <div class="badge badge-pill badge-light font-16"><span class="ti-user text-warning"></span> <?php echo $row->username; ?></div>
+                                    <h4 class="card-title m-t-10"><?php echo $row->fname; ?> <?php echo $row->lname; ?>
+                                    </h4>
+                                    <h6 class="card-subtitle"><span><?php echo $lang['user_manage2'] ?> <i
+                                                class="icon-double-angle-right"></i></span>
+                                        <div class="badge badge-pill badge-light font-16"><span
+                                                class="ti-user text-warning"></span> <?php echo $row->username; ?></div>
                                     </h6>
-                                    <h6 class="card-subtitle"><span><?php echo $lang['user-account21000'] ?> <i class="icon-double-angle-right"></i></span>
-                                        <div class="badge badge-pill badge-light font-16"> <?php echo $row->locker; ?></div>
+                                    <h6 class="card-subtitle"><span><?php echo $lang['user-account21000'] ?> <i
+                                                class="icon-double-angle-right"></i></span>
+                                        <div class="badge badge-pill badge-light font-16"> <?php echo $row->locker; ?>
+                                        </div>
                                     </h6>
                                 </center>
                             </div>
                             <div>
                                 <hr>
                             </div>
-                            <div class="card-body"> <small class="text-muted"><?php echo $lang['user-account4'] ?> </small>
-                                <h6><?php echo $row->email; ?></h6> <small class="text-muted p-t-30 db"><?php echo $lang['user-account8'] ?></small>
+                            <div class="card-body"> <small class="text-muted"><?php echo $lang['user-account4'] ?>
+                                </small>
+                                <h6><?php echo $row->email; ?></h6> <small
+                                    class="text-muted p-t-30 db"><?php echo $lang['user-account8'] ?></small>
                                 <h6> <?php echo $row->phone; ?></h6>
                             </div>
-                            <div class="card-body row text-center">
+                            <!-- <div class="card-body row text-center">
                                 <div class="col-6 border-right">
                                     <h6><?php echo $row->created; ?></h6>
                                     <span><?php echo $lang['user-account18'] ?></span>
@@ -171,7 +184,7 @@ $user_addreses = $db->cdp_registros();
                                     <h6><?php echo $row->lastlogin; ?></h6>
                                     <span><?php echo $lang['user-account19'] ?></span>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <!-- Column -->
@@ -180,60 +193,60 @@ $user_addreses = $db->cdp_registros();
                             <!-- Tabs -->
                             <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="pills-setting-tab" data-toggle="pill" href="#previous-month" role="tab" aria-controls="pills-setting" aria-selected="false"><span><?php echo $lang['edit-clien2'] ?> <i class="icon-double-angle-right"></i> <?php echo $row->username; ?></span></a>
+                                    <a class="nav-link active" id="tab-profile" data-toggle="pill"
+                                        href="#content-profile" role="tab" aria-controls="content-profile"
+                                        aria-selected="true">
+                                        <span>My Profile <i class="icon-double-angle-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" id="tab-address" data-toggle="pill" href="#content-address"
+                                        role="tab" aria-controls="content-address" aria-selected="false">
+                                        <span>My Addresses <i class="icon-double-angle-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" id="tab-methods" data-toggle="pill" href="#content-methods"
+                                        role="tab" aria-controls="content-methods" aria-selected="false">
+                                        <span>My Methods <i class="icon-double-angle-right"></i></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item mx-2">
+                                    <a class="nav-link" id="tab-preferences" data-toggle="pill"
+                                        href="#content-preferences" role="tab" aria-controls="content-preferences"
+                                        aria-selected="false">
+                                        <span>My Preferences <i class="icon-double-angle-right"></i></span>
+                                    </a>
                                 </li>
                             </ul>
                             <!-- Tabs -->
                             <div class="tab-content" id="pills-tabContent">
-                                <div class="tab-pane fade show active" id="previous-month" role="tabpanel" aria-labelledby="pills-setting-tab">
+                                <div class="tab-pane fade show active" id="content-profile" role="tabpanel"
+                                    aria-labelledby="tab-profile">
                                     <div class="card-body">
                                         <!-- <div id="loader" style="display:none"></div> -->
-                                        
-                                        <form class="form-horizontal form-material" id="edit_user" name="edit_user" method="post" enctype="multipart/form-data">
+
+                                        <form class="form-horizontal form-material" id="edit_user" name="edit_user"
+                                            method="post" enctype="multipart/form-data">
                                             <section>
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="firstName1"><?php echo $lang['user_manage3'] ?></label>
-                                                            <input type="text" class="form-control" disabled="disabled" name="username" readonly="readonly" value="<?php echo $row->username; ?>" placeholder="<?php echo $lang['user_manage3'] ?>">
+                                                            <label
+                                                                for="firstName1"><?php echo $lang['user_manage3'] ?></label>
+                                                            <input type="text" class="form-control" disabled="disabled"
+                                                                name="username" readonly="readonly"
+                                                                value="<?php echo $row->username; ?>"
+                                                                placeholder="<?php echo $lang['user_manage3'] ?>">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="lastName1"><?php echo $lang['user_manage4'] ?></label>
-                                                            <input type="text" class="form-control" id="password" name="password" placeholder="<?php echo $lang['user_manage32'] ?>">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="phoneNumber1"><?php echo $lang['leftorder164'] ?></label>
-                                                            <input type="text" class="form-control" id="document_type" name="document_type" value="<?php echo $row->document_type; ?>" readonly>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="phoneNumber1"><?php echo $lang['leftorder175'] ?></label>
-                                                            <input type="text" class="form-control" id="document_number" name="document_number" value="<?php echo $row->document_number; ?>" placeholder="<?php echo $lang['leftorder175'] ?>" readonly>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="emailAddress1"><?php echo $lang['user_manage6'] ?></label>
-                                                            <input type="text" class="form-control" name="fname" id="fname" value="<?php echo $row->fname; ?>" placeholder="<?php echo $lang['user_manage6'] ?>" readonly>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="phoneNumber1"><?php echo $lang['user_manage7'] ?></label>
-                                                            <input type="text" class="form-control" name="lname" id="lname" value="<?php echo $row->lname; ?>" placeholder="<?php echo $lang['user_manage7'] ?>" readonly>
+                                                            <label
+                                                                for="lastName1"><?php echo $lang['user_manage4'] ?></label>
+                                                            <input type="text" class="form-control" id="password"
+                                                                name="password"
+                                                                placeholder="<?php echo $lang['user_manage32'] ?>">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -241,17 +254,73 @@ $user_addreses = $db->cdp_registros();
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="emailAddress1"><?php echo $lang['user_manage5'] ?></label>
-                                                            <input type="text" class="form-control" id="email" name="email" value="<?php echo $row->email; ?>" placeholder="<?php echo $lang['user_manage5'] ?>" readonly>
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['leftorder164'] ?></label>
+                                                            <input type="text" class="form-control" id="document_type"
+                                                                name="document_type"
+                                                                value="<?php echo $row->document_type; ?>" readonly>
                                                         </div>
-
                                                     </div>
-                                                   
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="phoneNumber1"><?php echo $lang['user_manage9'] ?></label>
-                                                            <input type="text" class="form-control" id="phone_custom" name="phone_custom" value="<?php echo $row->phone; ?>" placeholder="<?php echo $lang['user_manage9'] ?>" readonly>
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['leftorder175'] ?></label>
+                                                            <input type="text" class="form-control" id="document_number"
+                                                                name="document_number"
+                                                                value="<?php echo $row->document_number; ?>"
+                                                                placeholder="<?php echo $lang['leftorder175'] ?>"
+                                                                readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label
+                                                                for="emailAddress1"><?php echo $lang['user_manage6'] ?></label>
+                                                            <input type="text" class="form-control" name="fname"
+                                                                id="fname" value="<?php echo $row->fname; ?>"
+                                                                placeholder="<?php echo $lang['user_manage6'] ?>"
+                                                                readonly>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['user_manage7'] ?></label>
+                                                            <input type="text" class="form-control" name="lname"
+                                                                id="lname" value="<?php echo $row->lname; ?>"
+                                                                placeholder="<?php echo $lang['user_manage7'] ?>"
+                                                                readonly>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label
+                                                                for="emailAddress1"><?php echo $lang['user_manage5'] ?></label>
+                                                            <input type="text" class="form-control" id="email"
+                                                                name="email" value="<?php echo $row->email; ?>"
+                                                                placeholder="<?php echo $lang['user_manage5'] ?>"
+                                                                readonly>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['user_manage9'] ?></label>
+                                                            <input type="text" class="form-control" id="phone_custom"
+                                                                name="phone_custom" value="<?php echo $row->phone; ?>"
+                                                                placeholder="<?php echo $lang['user_manage9'] ?>"
+                                                                readonly>
                                                             <span id="valid-msg" class="hide"></span>
                                                             <div id="error-msg" class="hide text-danger"></div>
                                                         </div>
@@ -264,141 +333,38 @@ $user_addreses = $db->cdp_registros();
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <label for="phoneNumber1"><?php echo $lang['user_manage11'] ?></label>
-                                                            <select class="custom-select form-control" id="gender" name="gender" value="<?php echo $row->gender; ?>" placeholder="<?php echo $lang['user_manage11'] ?>">
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['user_manage11'] ?></label>
+                                                            <select class="custom-select form-control" id="gender"
+                                                                name="gender" value="<?php echo $row->gender; ?>"
+                                                                placeholder="<?php echo $lang['user_manage11'] ?>">
                                                                 <option value="Male" <?php if ($row->gender == 'Male') {
-                                                                                            echo 'selected';
-                                                                                        } ?>><?php echo $lang['leftorder179'] ?></option>
+                                                                    echo 'selected';
+                                                                } ?>><?php echo $lang['leftorder179'] ?></option>
                                                                 <option value="Female" <?php if ($row->gender == 'Female') {
-                                                                                            echo 'selected';
-                                                                                        } ?>><?php echo $lang['leftorder178'] ?></option>
+                                                                    echo 'selected';
+                                                                } ?>><?php echo $lang['leftorder178'] ?></option>
                                                                 <option value="Other" <?php if ($row->gender == 'Other') {
-                                                                                            echo 'selected';
-                                                                                        } ?>><?php echo $lang['leftorder180'] ?></option>
+                                                                    echo 'selected';
+                                                                } ?>><?php echo $lang['leftorder180'] ?></option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                 </div>
 
-                                                
-                                                <hr>
-                                                <h4><?php echo $lang['leftorder176'] ?></h4>
-                                                <br>
-
-                                                <div id="resultados_ajax"></div>
-
-                                                <?php
-
-                                                $count = 0;
-
-                                                foreach ($user_addreses as $rowAddress) {
-                                                    $count++;
-
-                                                    $db->cdp_query("SELECT * FROM cdb_countries where id= '" . $rowAddress->country . "'");
-                                                    $country = $db->cdp_registro();
-
-                                                    $db->cdp_query("SELECT * FROM cdb_states where id= '" . $rowAddress->state . "'");
-                                                    $state = $db->cdp_registro();
-
-                                                    $db->cdp_query("SELECT * FROM cdb_cities where id= '" . $rowAddress->city . "'");
-                                                    $city = $db->cdp_registro();
-
-                                                ?>
-                                                    <div id="div_parent_<?php echo $count; ?>">
-
-                                                        <?php if ($count > 1) {
-                                                            echo '<hr>';
-                                                        } ?>
-
-                                                        <h4><?php echo $lang['laddress'];
-                                                            echo ' ' . $count; ?> </h4>
 
 
-
-                                                        <div class="row">
-                                                            <div class="col-md-4 mb-3">
-                                                                <div class="form-group">
-                                                                    <label class="control-label col-form-label"><?php echo $lang['leftorder318'] ?></label>
-                                                                    <select class="select2 form-control custom-select" name="country[]" id="country<?php echo $count; ?>">
-                                                                        <option value="<?php echo $country->id; ?>"><?php echo $country->name; ?></option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4 mb-3">
-                                                                <div class="form-group">
-                                                                    <label class="control-label col-form-label"><?php echo $lang['leftorder319'] ?></label>
-                                                                    <select class="select2 form-control custom-select" id="state<?php echo $count; ?>" name="state[]">
-                                                                        <option value="<?php echo $state->id; ?>"><?php echo $state->name; ?></option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4 mb-3">
-                                                                <div class="form-group">
-                                                                    <label class="control-label col-form-label"><?php echo $lang['leftorder320'] ?></label>
-                                                                    <select class="select2 form-control custom-select" id="city<?php echo $count; ?>" name="city[]">
-                                                                        <option value="<?php echo $city->id; ?>"><?php echo $city->name; ?></option>
-
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label for="phoneNumber1"><?php echo $lang['user_manage14'] ?></label>
-                                                                    <input type="text" class="form-control form-control-sm" value="<?php echo $rowAddress->zip_code; ?>" name="postal[]" id="postal<?php echo $count; ?>" placeholder="<?php echo $lang['user_manage14'] ?>">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4">
-                                                                <div class="form-group">
-                                                                    <label for="phoneNumber1"><?php echo $lang['user_manage10'] ?></label>
-                                                                    <input type="text" class="form-control form-control-sm" value="<?php echo $rowAddress->address; ?>" name="address[]" id="address<?php echo $count; ?>" placeholder="<?php echo $lang['user_manage10'] ?>">
-                                                                </div>
-                                                            </div>
-
-                                                            <input type="hidden" name="address_id[]" id="address_id<?php echo $count; ?>" value="<?php echo $rowAddress->id_addresses; ?>" />
-
-                                                            <?php
-
-                                                            if ($count > 1) { ?>
-                                                                <div align="center" class="col-md-4">
-                                                                    <label> &nbsp;</label>
-                                                                    <div class="form-group">
-                                                                        <button type="button" name="remove_row" id="<?php echo $count; ?>" class="btn btn-danger remove_row">
-                                                                            <span class="fa fa-trash"></span> <?php echo $lang['delete_address_recepient'] ?>
-                                                                        </button>
-                                                                    </div>
-                                                                </div>
-                                                            <?php
-                                                            }
-                                                            ?>
-                                                        </div>
-
-                                                    </div>
-                                                <?php
-                                                }
-
-                                                ?>
-
-                                                <input type="hidden" name="total_address" id="total_address" value="<?php echo $count; ?>" />
-                                                <input type="hidden" name="phone" id="phone" value="<?php echo $row->phone; ?>" />
-
-                                                <div id="div_address_multiple"></div>
-
-
-                                                <div align="left">
-                                                    <button type="button" name="add_row" id="add_row" class="btn btn-success mb-2"><span class="fa fa-plus"></span> <?php echo $lang['add_address_recepient'] ?></button>
-                                                </div>
 
 
                                                 <hr />
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <label for="emailAddress1"><?php echo $lang['user_manage28'] ?></label>
-                                                            <textarea class="form-control" name="notes" id="notes" rows="6" name="notes" placeholder="<?php echo $lang['user_manage31'] ?>">
+                                                            <label
+                                                                for="emailAddress1"><?php echo $lang['user_manage28'] ?></label>
+                                                            <textarea class="form-control" name="notes" id="notes"
+                                                                rows="6" name="notes"
+                                                                placeholder="<?php echo $lang['user_manage31'] ?>">
                                                             <?php echo $row->notes; ?>
                                                         </textarea>
                                                         </div>
@@ -408,14 +374,177 @@ $user_addreses = $db->cdp_registros();
                                             </section>
                                             <div class="form-group">
                                                 <div class="col-sm-12">
-                                                    <button class="btn btn-outline-primary btn-confirmation" name="save_data" id="save_data" type="submit"><?php echo $lang['user-account20'] ?><span><i class="icon-ok"></i></span></button>
-                                                    <a href="customers_list.php" class="btn btn-outline-secondary btn-confirmation"><span><i class="ti-share-alt"></i></span> <?php echo $lang['user_manage30'] ?></a>
+                                                    <button class="btn btn-outline-primary btn-confirmation"
+                                                        name="save_data" id="save_data"
+                                                        type="submit"><?php echo $lang['user-account20'] ?><span><i
+                                                                class="icon-ok"></i></span></button>
+                                                    <a href="customers_list.php"
+                                                        class="btn btn-outline-secondary btn-confirmation"><span><i
+                                                                class="ti-share-alt"></i></span>
+                                                        <?php echo $lang['user_manage30'] ?></a>
                                                 </div>
-                                                <input name="id" id="id" type="hidden" value="<?php echo $row->id; ?>" />
+                                                <input name="id" id="id" type="hidden"
+                                                    value="<?php echo $row->id; ?>" />
                                             </div>
-                                        </form>
                                     </div>
                                 </div>
+                                <div class="tab-pane fade" id="content-address" role="tabpanel"
+                                    aria-labelledby="tab-address">
+                                    <div class="card-body">
+                                        <h4><?php echo $lang['leftorder176'] ?></h4>
+                                        <br>
+
+                                        <div id="resultados_ajax"></div>
+
+                                        <?php
+
+                                        $count = 0;
+
+                                        foreach ($user_addreses as $rowAddress) {
+                                            $count++;
+
+                                            $db->cdp_query("SELECT * FROM cdb_countries where id= '" . $rowAddress->country . "'");
+                                            $country = $db->cdp_registro();
+
+                                            $db->cdp_query("SELECT * FROM cdb_states where id= '" . $rowAddress->state . "'");
+                                            $state = $db->cdp_registro();
+
+                                            $db->cdp_query("SELECT * FROM cdb_cities where id= '" . $rowAddress->city . "'");
+                                            $city = $db->cdp_registro();
+
+                                            ?>
+                                            <div id="div_parent_<?php echo $count; ?>">
+
+                                                <?php if ($count > 1) {
+                                                    echo '<hr>';
+                                                } ?>
+
+                                                <h4><?php echo $lang['laddress'];
+                                                echo ' ' . $count; ?> </h4>
+
+
+
+                                                <div class="row">
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="form-group">
+                                                            <label
+                                                                class="control-label col-form-label"><?php echo $lang['leftorder318'] ?></label>
+                                                            <select class="select2 form-control custom-select"
+                                                                name="country[]" id="country<?php echo $count; ?>">
+                                                                <option value="<?php echo $country->id; ?>">
+                                                                    <?php echo $country->name; ?>
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="form-group">
+                                                            <label
+                                                                class="control-label col-form-label"><?php echo $lang['leftorder319'] ?></label>
+                                                            <select class="select2 form-control custom-select"
+                                                                id="state<?php echo $count; ?>" name="state[]">
+                                                                <option value="<?php echo $state->id; ?>">
+                                                                    <?php echo $state->name; ?>
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 mb-3">
+                                                        <div class="form-group">
+                                                            <label
+                                                                class="control-label col-form-label"><?php echo $lang['leftorder320'] ?></label>
+                                                            <select class="select2 form-control custom-select"
+                                                                id="city<?php echo $count; ?>" name="city[]">
+                                                                <option value="<?php echo $city->id; ?>">
+                                                                    <?php echo $city->name; ?>
+                                                                </option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['user_manage14'] ?></label>
+                                                            <input type="text" class="form-control form-control-sm"
+                                                                value="<?php echo $rowAddress->zip_code; ?>" name="postal[]"
+                                                                id="postal<?php echo $count; ?>"
+                                                                placeholder="<?php echo $lang['user_manage14'] ?>">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4">
+                                                        <div class="form-group">
+                                                            <label
+                                                                for="phoneNumber1"><?php echo $lang['user_manage10'] ?></label>
+                                                            <input type="text" class="form-control form-control-sm"
+                                                                value="<?php echo $rowAddress->address; ?>" name="address[]"
+                                                                id="address<?php echo $count; ?>"
+                                                                placeholder="<?php echo $lang['user_manage10'] ?>">
+                                                        </div>
+                                                    </div>
+
+                                                    <input type="hidden" name="address_id[]"
+                                                        id="address_id<?php echo $count; ?>"
+                                                        value="<?php echo $rowAddress->id_addresses; ?>" />
+
+                                                    <?php
+
+                                                    if ($count > 1) { ?>
+                                                        <div align="center" class="col-md-4">
+                                                            <label> &nbsp;</label>
+                                                            <div class="form-group">
+                                                                <button type="button" name="remove_row"
+                                                                    id="<?php echo $count; ?>"
+                                                                    class="btn btn-danger remove_row">
+                                                                    <span class="fa fa-trash"></span>
+                                                                    <?php echo $lang['delete_address_recepient'] ?>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </div>
+
+                                            </div>
+                                            <?php
+                                        }
+
+                                        ?>
+
+                                        <input type="hidden" name="total_address" id="total_address"
+                                            value="<?php echo $count; ?>" />
+                                        <input type="hidden" name="phone" id="phone"
+                                            value="<?php echo $row->phone; ?>" />
+
+                                        <div id="div_address_multiple"></div>
+
+
+                                        <div align="left">
+                                            <button type="button" name="add_row" id="add_row"
+                                                class="btn btn-success mb-2"><span class="fa fa-plus"></span>
+                                                <?php echo $lang['add_address_recepient'] ?></button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                                <div class="tab-pane fade" id="content-methods" role="tabpanel"
+                                    aria-labelledby="tab-methods">
+                                    <div class="card-body">
+                                        <p>Your payment methods go here.</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="content-preferences" role="tabpanel"
+                                    aria-labelledby="tab-preferences">
+                                    <div class="card-body">
+                                        <p>Your preferences go here.</p>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -437,7 +566,7 @@ $user_addreses = $db->cdp_registros();
 
     <?php include('helpers/languages/translate_to_js.php'); ?>
 
-    
+
     <script src="assets/template/assets/libs/select2/dist/js/select2.full.min.js"></script>
     <script src="assets/template/assets/libs/select2/dist/js/select2.min.js"></script>
     <script src="assets/template/assets/libs/intlTelInput/intlTelInput.js"></script>
