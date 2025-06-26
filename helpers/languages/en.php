@@ -615,7 +615,7 @@ $lang = array(
 	"left-menu-sidebar-0" => "branch",
 	"left-menu-sidebar-00" => "Locker",
 	"left-menu-sidebar-1" => "Create new shipment",
-	"left-menu-sidebar-2" => "Control Panel",
+	"left-menu-sidebar-2" => "Dashboard",
 	"left-menu-sidebar-3" => "Application Management",
 	"left-menu-sidebar-4" => "All submissions",
 
@@ -2894,7 +2894,7 @@ $lang = array(
 	"user-account18" => "Registration Date",
 	"user-account19" => "Last login",
 	"user-account20" => "Update profile",
-	"user-account21000" => "Virtual mailbox",
+	"user-account21000" => "Suit",
 
 	/** Booking List **/
 	"booking-list1" => "Reservation List",

@@ -62,7 +62,7 @@ $offset = ($page - 1) * $per_page;
 $sql = "SELECT a.status_invoice,  a.order_incomplete,  a.is_consolidate, a.is_pickup,  a.total_order, a.order_id, a.order_prefix, a.order_no, a.order_date, a.sender_id, a.receiver_id, a.order_courier, a.order_pay_mode, a.status_courier, a.driver_id, a.order_service_options,  b.mod_style, b.color FROM
 			 cdb_add_order as a
 			 INNER JOIN cdb_styles as b ON a.status_courier = b.id
-			 and a.status_courier!=14
+			 and a.status_courier=4
 			 $swhere
 
 			 order by order_id desc 
@@ -82,7 +82,7 @@ $total_pages = ceil($numrows / $per_page);
 
 if ($numrows > 0) { ?>
 	<div class="table-responsive">
-		<table id="zero_config" class="table table-condensed table-hover table-striped custom-table-checkbox">
+		<table class="table table-condensed table-hover table-striped custom-table-checkbox">
 			<thead>
 				<tr>
 					<th><b><?php echo $lang['ltracking'] ?></b></th>
@@ -96,7 +96,7 @@ if ($numrows > 0) { ?>
 					<th class="text-center"><b><?php echo $lang['global-3'] ?></b></th>
 				</tr>
 			</thead>
-			<tbody id="projects-tbl">
+			<tbody>
 
 
 				<?php if (!$data) { ?>

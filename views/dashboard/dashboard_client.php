@@ -1,23 +1,5 @@
 <?php
-// *************************************************************************
-// *                                                                       *
-// * DEPRIXA PRO -  Integrated Web Shipping System                         *
-// * Copyright (c) JAOMWEB. All Rights Reserved                            *
-// *                                                                       *
-// *************************************************************************
-// *                                                                       *
-// * Email: support@jaom.info                                              *
-// * Website: http://www.jaom.info                                         *
-// *                                                                       *
-// *************************************************************************
-// *                                                                       *
-// * This software is furnished under a license and may be used and copied *
-// * only  in  accordance  with  the  terms  of such  license and with the *
-// * inclusion of the above copyright notice.                              *
-// * If you Purchased from Codecanyon, Please read the full License from   *
-// * here- http://codecanyon.net/licenses/standard                         *
-// *                                                                       *
-// *************************************************************************
+
 
 
 $userData = $user->cdp_getUserData();
@@ -78,6 +60,27 @@ foreach ($data as $row) {
 
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/<?php echo $core->favicon ?>">
+    <style>
+        .ready-to-send {
+            border-top: 4px solid #00a661 !important;
+            margin-right: 0.5rem;
+        }
+
+        .in-review {
+            border-top: 4px solid #fdb913 !important;
+            margin-right: 0.5rem;
+        }
+
+        .action-required {
+            border-top: 4px solid red !important;
+            margin-right: 0.5rem;
+        }
+
+        .view-all {
+            border-top: 4px solid #476f7d !important;
+            margin-right: 0.5rem;
+        }
+    </style>
     <?php include 'views/inc/head_scripts.php'; ?>
 </head>
 
@@ -544,7 +547,7 @@ foreach ($data as $row) {
                         <div class="card">
                             <div class="card-body">
 
-                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                                     <li class="nav-item">
                                         <a class="nav-link active" id="pills-home-tab" data-toggle="pill"
                                             href="#pills-shipment" role="tab" aria-controls="pills-shipment"
@@ -569,9 +572,52 @@ foreach ($data as $row) {
                                             <?php echo $lang['dash-general-21'] ?></a>
                                     </li>
 
-                                </ul>
+                                </ul> -->
 
-                                <div class="tab-content" id="pills-tabContent">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <button class="nav-link ready-to-send" id="nav-ready-to-send-tab"
+                                            data-toggle="tab" data-target="#nav-ready-to-send" type="button" role="tab"
+                                            aria-controls="nav-ready-to-send" aria-selected="false">Ready to
+                                            send</button>
+
+                                        <button class="nav-link in-review" id="nav-in-review-tab" data-toggle="tab"
+                                            data-target="#nav-in-review" type="button" role="tab"
+                                            aria-controls="nav-in-review" aria-selected="false">In Review</button>
+
+                                        <button class="nav-link action-required" id="nav-action-required-tab"
+                                            data-toggle="tab" data-target="#nav-action-required" type="button"
+                                            role="tab" aria-controls="nav-action-required" aria-selected="false">Action
+                                            Required</button>
+
+                                        <button class="nav-link active view-all" id="nav-view-all-tab" data-toggle="tab"
+                                            data-target="#nav-view-all" type="button" role="tab"
+                                            aria-controls="nav-view-all" aria-selected="true">View All</button>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade" id="nav-ready-to-send" role="tabpanel"
+                                        aria-labelledby="nav-ready-to-send-tab">
+                                        <div class="outer_ready_to_send_div"></div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="nav-in-review" role="tabpanel"
+                                        aria-labelledby="nav-in-review-tab">
+                                        <div class="outer_in_review_div"></div>
+                                    </div>
+
+                                    <div class="tab-pane fade" id="nav-action-required" role="tabpanel"
+                                        aria-labelledby="nav-action-required-tab">
+                                        <div class="outer_action_required_div"></div>
+                                    </div>
+
+                                    <div class="tab-pane fade show active" id="nav-view-all" role="tabpanel"
+                                        aria-labelledby="nav-view-all-tab">
+                                        <div class="outer_div"></div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="tab-content" id="pills-tabContent">
                                     <div class="tab-pane fade show active" id="pills-shipment" role="tabpanel"
                                         aria-labelledby="pills-home-tab">
 
@@ -579,7 +625,7 @@ foreach ($data as $row) {
 
                                     </div>
 
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
