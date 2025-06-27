@@ -576,19 +576,17 @@ foreach ($data as $row) {
 
                                 <nav>
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <button class="nav-link ready-to-send" id="nav-ready-to-send-tab"
-                                            data-toggle="tab" data-target="#nav-ready-to-send" type="button" role="tab"
-                                            aria-controls="nav-ready-to-send" aria-selected="false">Ready to
-                                            send</button>
-
-                                        <button class="nav-link in-review" id="nav-in-review-tab" data-toggle="tab"
-                                            data-target="#nav-in-review" type="button" role="tab"
-                                            aria-controls="nav-in-review" aria-selected="false">In Review</button>
-
                                         <button class="nav-link action-required" id="nav-action-required-tab"
                                             data-toggle="tab" data-target="#nav-action-required" type="button"
                                             role="tab" aria-controls="nav-action-required" aria-selected="false">Action
                                             Required</button>
+                                        <button class="nav-link in-review" id="nav-in-review-tab" data-toggle="tab"
+                                            data-target="#nav-in-review" type="button" role="tab"
+                                            aria-controls="nav-in-review" aria-selected="false">In Review</button>
+                                        <button class="nav-link ready-to-send" id="nav-ready-to-send-tab"
+                                            data-toggle="tab" data-target="#nav-ready-to-send" type="button" role="tab"
+                                            aria-controls="nav-ready-to-send" aria-selected="false">Ready to
+                                            send</button>
 
                                         <button class="nav-link active view-all" id="nav-view-all-tab" data-toggle="tab"
                                             data-target="#nav-view-all" type="button" role="tab"
@@ -596,19 +594,20 @@ foreach ($data as $row) {
                                     </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
-                                    <div class="tab-pane fade" id="nav-ready-to-send" role="tabpanel"
-                                        aria-labelledby="nav-ready-to-send-tab">
-                                        <div class="outer_ready_to_send_div"></div>
+                                    <div class="tab-pane fade" id="nav-action-required" role="tabpanel"
+                                        aria-labelledby="nav-action-required-tab">
+                                        <div class="outer_action_required_div"></div>
                                     </div>
+
 
                                     <div class="tab-pane fade" id="nav-in-review" role="tabpanel"
                                         aria-labelledby="nav-in-review-tab">
                                         <div class="outer_in_review_div"></div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="nav-action-required" role="tabpanel"
-                                        aria-labelledby="nav-action-required-tab">
-                                        <div class="outer_action_required_div"></div>
+                                    <div class="tab-pane fade" id="nav-ready-to-send" role="tabpanel"
+                                        aria-labelledby="nav-ready-to-send-tab">
+                                        <div class="outer_ready_to_send_div"></div>
                                     </div>
 
                                     <div class="tab-pane fade show active" id="nav-view-all" role="tabpanel"

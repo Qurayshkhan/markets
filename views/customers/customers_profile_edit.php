@@ -251,7 +251,7 @@ $user_addreses = $db->cdp_registros();
                                                     </div>
                                                 </div>
 
-                                                <div class="row">
+                                                <div class="row" hidden>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label
@@ -329,7 +329,7 @@ $user_addreses = $db->cdp_registros();
                                                 </div>
 
 
-                                                <div class="row">
+                                                <div class="row" hidden>
 
                                                     <div class="col-md-6">
                                                         <div class="form-group">
@@ -535,13 +535,13 @@ $user_addreses = $db->cdp_registros();
                                 <div class="tab-pane fade" id="content-methods" role="tabpanel"
                                     aria-labelledby="tab-methods">
                                     <div class="card-body">
-                                        <p>Your payment methods go here.</p>
+                                        <p>Coming soon.</p>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade" id="content-preferences" role="tabpanel"
                                     aria-labelledby="tab-preferences">
                                     <div class="card-body">
-                                        <p>Your preferences go here.</p>
+                                        <p>Coming soon.</p>
                                     </div>
                                 </div>
 

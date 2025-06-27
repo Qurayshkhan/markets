@@ -1021,7 +1021,7 @@
 							<!-- User Profile-->
 
 
-							<li class="sidebar-item">
+							<li class="sidebar-item" hidden>
 								<a class="sidebar-link waves-effect waves-dark" href="index.php" aria-expanded="false"><i
 										class="mdi mdi-view-dashboard"></i>
 									<span class="hide-menu"> <?php echo $lang['left-menu-sidebar-2'] ?> </span>
